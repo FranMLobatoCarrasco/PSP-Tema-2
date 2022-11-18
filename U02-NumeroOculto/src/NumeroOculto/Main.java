@@ -7,29 +7,26 @@ class NumeroOculto extends Thread {
     public static int numeroOculto;
     private static int comprobacion = 0;
 
-    synchronized public static int propuestaNumero(int numero) {
+    public synchronized static int propuestaNumero(int numero) {
         if (comprobacion == 1)
             comprobacion = -1;
         if (numero == numeroOculto)
             comprobacion = 1;
         return comprobacion;
     }
-}
 
-public class Main extends Thread {
-
-    public Main() {
+    public NumeroOculto() {
         super();
     }
 
     @Override
     public void run() {
-        int numero = (int) (Math.random() * (10000 + 1));
+        int numero = (int) (Math.random() * 100 + 1);
         if (propuestaNumero(numero) == 1)
             Thread.currentThread().interrupt();
         else {
             do {
-                numero = (int) (Math.random() * (10000 + 1));
+                numero = (int) (Math.random() * 100 + 1);
                 if (propuestaNumero(numero) == 1) {
                     System.out.println("Encontrado por el " + Thread.currentThread().getName());
                 }
@@ -41,16 +38,16 @@ public class Main extends Thread {
     public static void main(String[] args) {
         numeroOculto = (int) (Math.random() * (100 + 1));
 
-        Main hilo1 = new Main();
-        Main hilo2 = new Main();
-        Main hilo3 = new Main();
-        Main hilo4 = new Main();
-        Main hilo5 = new Main();
-        Main hilo6 = new Main();
-        Main hilo7 = new Main();
-        Main hilo8 = new Main();
-        Main hilo9 = new Main();
-        Main hilo10 = new Main();
+        NumeroOculto hilo1 = new NumeroOculto();
+        NumeroOculto hilo2 = new NumeroOculto();
+        NumeroOculto hilo3 = new NumeroOculto();
+        NumeroOculto hilo4 = new NumeroOculto();
+        NumeroOculto hilo5 = new NumeroOculto();
+        NumeroOculto hilo6 = new NumeroOculto();
+        NumeroOculto hilo7 = new NumeroOculto();
+        NumeroOculto hilo8 = new NumeroOculto();
+        NumeroOculto hilo9 = new NumeroOculto();
+        NumeroOculto hilo10 = new NumeroOculto();
 
         hilo1.setName("hilo 1");
         hilo2.setName("hilo 2");
