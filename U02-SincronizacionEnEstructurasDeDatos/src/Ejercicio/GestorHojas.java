@@ -6,7 +6,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class GestorHojas extends Thread {
 
-	private volatile static CopyOnWriteArrayList<String> lista = new CopyOnWriteArrayList<String>();
+	private static final CopyOnWriteArrayList<String> lista = new CopyOnWriteArrayList<>();
 
 
 	@Override
