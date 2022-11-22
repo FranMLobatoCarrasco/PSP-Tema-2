@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/PSP-Tema-2.iml" filepath="$PROJECT_DIR$/.idea/PSP-Tema-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U02-HilosDurmientes/U02-HilosDurmientes.iml" filepath="$PROJECT_DIR$/U02-HilosDurmientes/U02-HilosDurmientes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U02-NumeroOculto/U02-NumeroOculto.iml" filepath="$PROJECT_DIR$/U02-NumeroOculto/U02-NumeroOculto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U02-SincronizacionEnEstructurasDeDatos/U02-SincronizacionEnEstructurasDeDatos.iml" filepath="$PROJECT_DIR$/U02-SincronizacionEnEstructurasDeDatos/U02-SincronizacionEnEstructurasDeDatos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U2-Semaforos/U2-Semaforos.iml" filepath="$PROJECT_DIR$/U2-Semaforos/U2-Semaforos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U2-SemarofosAvanzado/U2-SemarofosAvanzado.iml" filepath="$PROJECT_DIR$/U2-SemarofosAvanzado/U2-SemarofosAvanzado.iml" />
+    </modules>
+  </component>
+</project>

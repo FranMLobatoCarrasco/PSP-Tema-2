@@ -12,18 +12,16 @@ public class CarniceriaCharcuteria implements Runnable {
         }
     }
 
-    public static Semaphore semaforoCarniceria = new Semaphore(4);
+    public static Semaphore semaforoCarniceria = new Semaphore(4); // Permitimos 4 ejecuciones a la vez
+    public static Semaphore semaforoCharcuteria = new Semaphore(2); // Permitimos 2 ejecuciones a la vez
+    private boolean esAtendidoCharcuteria = false; // Booleano para comprobar si esta atendido el hilo
+    private boolean esAtendidoCarniceria = false; // Booleano para comprobar si esta atendido el hilo
 
-    public static Semaphore semaforoCharcuteria = new Semaphore(2);
-    private boolean esAtendidoCarniceria = false;
-
-    private boolean esAtendidoCharcuteria = false;
-
-    public CarniceriaCharcuteria() {
+    public CarniceriaCharcuteria() { // Constructor de los hilos
         super();
     }
 
-    public void charcuteria() {
+    public void charcuteria() { // Metodo para ejecutar el hilo de la charcuteria
         try {
             semaforoCharcuteria.acquire(); // Si hay alguien libre, entra
             System.out.println("El cliente " + Thread.currentThread().getName() + " pidiendo en la charcutería"); // Mensaje de que está siendo atendido
@@ -35,7 +33,7 @@ public class CarniceriaCharcuteria implements Runnable {
         }
     }
 
-    public void carniceria() {
+    public void carniceria() { // Metodo para ejecutar el hilo de la carniceria
         try {
             semaforoCarniceria.acquire(); // Si hay alguien libre, entra
             System.out.println("El cliente " + Thread.currentThread().getName() + " pidiendo en la carnicería"); // Mensaje de que está siendo atendido
