@@ -6,12 +6,11 @@ public class Carniceria implements Runnable {
 
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {
-            Thread hilo = new Thread(new Carniceria());
-            hilo.setName(String.valueOf(i));
-            hilo.start();
+            Thread hilo = new Thread(new Carniceria()); // Lanzamos el hilo
+            hilo.setName(String.valueOf(i)); // Seteamos el nombre
+            hilo.start(); // Lo iniciamos
         }
     }
-
 
     public static Semaphore semaforo = new Semaphore(4);
 
@@ -23,10 +22,10 @@ public class Carniceria implements Runnable {
 
     public void carniceria() {
         try {
-            semaforo.acquire();
-            System.out.println("El cliente " + Thread.currentThread().getName() + " pidiendo en la carniceria");
-            Thread.sleep((long) (Math.random() * 10000));
-            System.out.println("El " + Thread.currentThread().getName() + " ha terminado en la carniceria");
+            semaforo.acquire(); // Si hay alguien libre, entra
+            System.out.println("El cliente " + Thread.currentThread().getName() + " pidiendo en la carniceria"); // Mensaje de que está siendo atendido
+            Thread.sleep((long) (Math.random() * 10000)); // Esperamos un tiempo aleatorio entre 1 y 10 segundos
+            System.out.println("El " + Thread.currentThread().getName() + " ha terminado en la carniceria"); // Mensaje de que ha terminado
             semaforo.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -36,7 +35,7 @@ public class Carniceria implements Runnable {
     @Override
     public void run() {
         while (!atendido) {
-            if (semaforo.availablePermits() > 0 && !atendido) {
+            if (semaforo.availablePermits() > 0 && !atendido) { // Comprobamos si hay hueco, y si está atendido el proceso
                 carniceria();
                 atendido = true;
             }
