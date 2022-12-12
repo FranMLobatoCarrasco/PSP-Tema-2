@@ -8,7 +8,6 @@ public class GestorHojas extends Thread {
 
 	private static final CopyOnWriteArrayList<String> lista = new CopyOnWriteArrayList<>();
 
-
 	@Override
 	public void run() {
 		for (int i = 0; i < 10; i++) {

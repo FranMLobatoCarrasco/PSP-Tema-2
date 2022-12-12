@@ -14,8 +14,8 @@ public class CarniceriaCharcuteria implements Runnable {
 
     public static Semaphore semaforoCarniceria = new Semaphore(4); // Permitimos 4 ejecuciones a la vez
     public static Semaphore semaforoCharcuteria = new Semaphore(2); // Permitimos 2 ejecuciones a la vez
-    private boolean esAtendidoCharcuteria = false; // Booleano para comprobar si esta atendido el hilo
-    private boolean esAtendidoCarniceria = false; // Booleano para comprobar si esta atendido el hilo
+    private boolean esAtendidoCharcuteria = false; // Booleano para comprobar si está atendido el hilo
+    private boolean esAtendidoCarniceria = false; // Booleano para comprobar si está atendido el hilo
 
     public CarniceriaCharcuteria() { // Constructor de los hilos
         super();

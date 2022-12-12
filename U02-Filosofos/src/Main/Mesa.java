@@ -11,15 +11,15 @@ public class Mesa {
         return i;
     }
 
-    public int tenedorDerecha (int i) {
-        int numTenedor = i-1;
+    public int tenedorDerecha(int i) {
+        int numTenedor = i - 1;
         if (i == 0)
             numTenedor = this.tenedores.length - 1;
         return numTenedor;
     }
 
     public synchronized void cogerTenedores(int filosofo) {
-        while (tenedores[tenedorIzquierda(filosofo)] || tenedores[tenedorIzquierda(filosofo)]){
+        while (tenedores[tenedorIzquierda(filosofo)] || tenedores[tenedorIzquierda(filosofo)]) {
             try {
                 this.wait();
             } catch (InterruptedException e) {
@@ -30,7 +30,7 @@ public class Mesa {
         tenedores[tenedorDerecha(filosofo)] = true;
     }
 
-    public synchronized void dejarTenedores(int comensal){
+    public synchronized void dejarTenedores(int comensal) {
         tenedores[tenedorIzquierda(comensal)] = false;
         tenedores[tenedorDerecha(comensal)] = false;
         notifyAll();
