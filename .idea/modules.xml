@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PSP-Tema-2.iml" filepath="$PROJECT_DIR$/.idea/PSP-Tema-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/U02-EstudiantesLibros/U02-EstudiantesLibros.iml" filepath="$PROJECT_DIR$/U02-EstudiantesLibros/U02-EstudiantesLibros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/U02-ExamenCorregido/U02-ExamenCorregido.iml" filepath="$PROJECT_DIR$/U02-ExamenCorregido/U02-ExamenCorregido.iml" />
       <module fileurl="file://$PROJECT_DIR$/U02-Filosofos/U02-Filosofos.iml" filepath="$PROJECT_DIR$/U02-Filosofos/U02-Filosofos.iml" />
       <module fileurl="file://$PROJECT_DIR$/U02-HilosDurmientes/U02-HilosDurmientes.iml" filepath="$PROJECT_DIR$/U02-HilosDurmientes/U02-HilosDurmientes.iml" />
       <module fileurl="file://$PROJECT_DIR$/U02-NumeroOculto/U02-NumeroOculto.iml" filepath="$PROJECT_DIR$/U02-NumeroOculto/U02-NumeroOculto.iml" />
