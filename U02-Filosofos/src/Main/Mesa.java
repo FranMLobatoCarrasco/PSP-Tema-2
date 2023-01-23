@@ -19,7 +19,7 @@ public class Mesa {
     }
 
     public synchronized void cogerTenedores(int filosofo) {
-        while (tenedores[tenedorIzquierda(filosofo)] || tenedores[tenedorIzquierda(filosofo)]) {
+        while (tenedores[tenedorIzquierda(filosofo)] || tenedores[tenedorDerecha(filosofo)]) {
             try {
                 this.wait();
             } catch (InterruptedException e) {

@@ -85,7 +85,6 @@ class HiloConsumidor implements Runnable {
 }
 
 class Secuencia {
-
     static private long numSec = 0;
 
     synchronized static public long getNumSec() {
@@ -96,7 +95,7 @@ class Secuencia {
 public class ProductorConsumidorContenedorThreadSafe {
 
     public static void main(String[] args) {
-        Contenedor<Integer> almacen = new Contenedor<Integer>();
+        Contenedor<Integer> almacen = new Contenedor<>();
         Thread hprod1 = new Thread(new HiloProductor(almacen, "P1"));
         Thread hprod2 = new Thread(new HiloProductor(almacen, "P2"));
         Thread hcons1 = new Thread(new HiloConsumidor(almacen, "C1"));
